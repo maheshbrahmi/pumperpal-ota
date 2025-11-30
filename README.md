@@ -37,3 +37,5 @@ bash# Set rollout to 0%
 echo '{"rollout_percentage": 0}' > version.json
 git commit -am "STOP OTA"
 git push
+
+/Users/mac/Desktop/PumperpalFW/Main/.pio/build/huzzah
