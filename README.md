@@ -39,3 +39,18 @@ git commit -am "STOP OTA"
 git push
 
 /Users/mac/Desktop/PumperpalFW/Main/.pio/build/huzzah
+
+# Clone your new repo
+git clone https://github.com/YOUR_USERNAME/pumperpal-ota.git
+cd pumperpal-ota
+
+# Create version.txt
+echo "2.1.0" > version.txt
+
+# Copy your firmware
+cp /path/to/your/project/.pio/build/huzzah/firmware.bin ./firmware.bin
+
+# Commit and push
+git add .
+git commit -m "Initial release v2.1.0"
+git push
