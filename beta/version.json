@@ -1,0 +1,12 @@
+{
+  "version": "2.2.0-beta",
+  "mandatory": false,
+  "min_battery_mv": 3900,
+  "changelog": "Beta: Testing new features",
+  "url": "https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/beta/firmware.bin",
+  "size": 0,
+  "md5": "",
+  "release_date": "2024-01-15",
+  "rollout_percentage": 10,
+  "test_devices": ["E8:DB:84:96:F4:9F"]
+}
