@@ -113,7 +113,3 @@ if [ "$DEPLOYED_VERSION" == "$VERSION" ]; then
 else
     echo -e "${YELLOW}⚠ GitHub Pages not updated yet. It may take a few more minutes.${NC}"
 fi
-
-
-echo -e "${GREEN}✓ Firmware v$VERSION released successfully!${NC}"
-echo -e "${YELLOW}Devices will receive update within 96 hours.${NC}"
