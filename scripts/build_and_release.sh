@@ -102,14 +102,14 @@ echo -e "${YELLOW}GitHub Pages will update in 1-5 minutes...${NC}"
 echo -e "${YELLOW}Devices will receive update within 96 hours.${NC}"
 
 # Optional: Wait and verify
-echo -e "\n${YELLOW}Waiting for GitHub Pages to update...${NC}"
-sleep 60  # Wait 1 minute
+# echo -e "\n${YELLOW}Waiting for GitHub Pages to update...${NC}"
+# sleep 60  # Wait 1 minute
 
-# Test if the new version is accessible
-echo -e "Testing GitHub Pages deployment..."
-DEPLOYED_VERSION=$(curl -s https://maheshbrahmi.github.io/pumperpal-ota/version.txt)
-if [ "$DEPLOYED_VERSION" == "$VERSION" ]; then
-    echo -e "${GREEN}✓ Version $VERSION is now live on GitHub Pages!${NC}"
-else
-    echo -e "${YELLOW}⚠ GitHub Pages not updated yet. It may take a few more minutes.${NC}"
-fi
+# # Test if the new version is accessible
+# echo -e "Testing GitHub Pages deployment..."
+# DEPLOYED_VERSION=$(curl -s https://maheshbrahmi.github.io/pumperpal-ota/version.txt)
+# if [ "$DEPLOYED_VERSION" == "$VERSION" ]; then
+#     echo -e "${GREEN}✓ Version $VERSION is now live on GitHub Pages!${NC}"
+# else
+#     echo -e "${YELLOW}⚠ GitHub Pages not updated yet. It may take a few more minutes.${NC}"
+# fi
