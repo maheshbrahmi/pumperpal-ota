@@ -4,7 +4,7 @@
   "min_battery_mv": 3700,
   "changelog": "Fixed voltage scaling",
   "url": "https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/firmware.bin",
-  "size": 491712,
+  "size": 491760,
   "md5": "",
   "release_date": "2025-11-30",
   "rollout_percentage": 100
