@@ -22,7 +22,8 @@ IS_BETA=${3:-stable}
 echo -e "${GREEN}Building Pumperpal firmware v$VERSION...${NC}"
 
 # Build firmware with PlatformIO
-cd ../../pumperpal-main-project  # Adjust path to your main project
+cd ../../PumperpalFW/Main/  # Adjust path to your main project
+pwd
 pio run -e huzzah
 
 if [ $? -ne 0 ]; then
@@ -34,9 +35,9 @@ echo -e "${GREEN}Build successful!${NC}"
 
 # Copy firmware
 if [ "$IS_BETA" == "beta" ]; then
-    TARGET_DIR="../pumperpal-ota/beta"
+    TARGET_DIR="../../pumperpal-ota/beta"
 else
-    TARGET_DIR="../pumperpal-ota"
+    TARGET_DIR="../../pumperpal-ota"
 fi
 
 cp .pio/build/huzzah/firmware.bin $TARGET_DIR/firmware.bin
@@ -54,9 +55,9 @@ echo "  Date: $DATE"
 
 # Update version.json
 if [ "$IS_BETA" == "beta" ]; then
-    URL="https://raw.githubusercontent.com/YOUR_USERNAME/pumperpal-ota/main/beta/firmware.bin"
+    URL="https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/beta/firmware.bin"
 else
-    URL="https://raw.githubusercontent.com/YOUR_USERNAME/pumperpal-ota/main/firmware.bin"
+    URL="https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/firmware.bin"
 fi
 
 cat > $TARGET_DIR/version.json <<EOF
