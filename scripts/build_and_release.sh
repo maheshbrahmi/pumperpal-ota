@@ -73,17 +73,19 @@ cat > $TARGET_DIR/version.json <<EOF
   "rollout_percentage": 100
 }
 EOF
+echo "PWD"
+pwd
 
 # Archive current version (if stable)
 if [ "$IS_BETA" != "beta" ]; then
     echo -e "${GREEN}Archiving version $VERSION...${NC}"
-    mkdir -p ../pumperpal-ota/archive/v$VERSION
-    cp $TARGET_DIR/firmware.bin ../pumperpal-ota/archive/v$VERSION/
-    cp $TARGET_DIR/version.json ../pumperpal-ota/archive/v$VERSION/
+    mkdir -p ../../pumperpal-ota/archive/v$VERSION
+    cp $TARGET_DIR/firmware.bin ../../pumperpal-ota/archive/v$VERSION/
+    cp $TARGET_DIR/version.json ../../pumperpal-ota/archive/v$VERSION/
 fi
 
 # Git operations
-cd ../pumperpal-ota
+cd ../../pumperpal-ota
 git add .
 git commit -m "Release v$VERSION: $CHANGELOG"
 git push
