@@ -158,4 +158,7 @@ Update version.txt: echo "2.2.0" > version.txt
 Copy firmware: cp firmware.bin pumperpal-ota/
 Push to GitHub: git add . && git commit -m "v2.2.0" && git push
 
-
+## TO BUILD AND RELEASE make sure that the pumperpla-ota is on the same level as pumperpalFW (Desktop) Then cd scripts folder and run this script. 
+./build_and_release.sh 2.1.1-beta 'Fixed voltage scaling'
+or
+./build_and_release.sh 2.1.1 'Fixed voltage scaling'
