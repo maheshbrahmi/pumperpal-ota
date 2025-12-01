@@ -98,7 +98,7 @@ git commit -m "Release v$VERSION: $CHANGELOG"
 git push
 
 echo -e "${GREEN}✓ Firmware v$VERSION released successfully!${NC}"
-echo -e "${YELLOW}GitHub Pages will update in 1-5 minutes...${NC}"
+#echo -e "${YELLOW}GitHub Pages will update in 1-5 minutes...${NC}"
 echo -e "${YELLOW}Devices will receive update within 96 hours.${NC}"
 
 # Optional: Wait and verify
