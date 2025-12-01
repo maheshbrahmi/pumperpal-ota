@@ -53,6 +53,10 @@ echo "  Size: $SIZE bytes"
 echo "  MD5: $MD5"
 echo "  Date: $DATE"
 
+# Update version.txt (just the version number)
+echo "$VERSION" > $TARGET_DIR/version.txt
+echo -e "${GREEN}✓ Updated version.txt${NC}"
+
 # Update version.json
 if [ "$IS_BETA" == "beta" ]; then
     URL="https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/beta/firmware.bin"
@@ -73,6 +77,8 @@ cat > $TARGET_DIR/version.json <<EOF
   "rollout_percentage": 100
 }
 EOF
+echo -e "${GREEN}✓ Updated version.json${NC}"
+
 echo "PWD"
 pwd
 
@@ -82,6 +88,7 @@ if [ "$IS_BETA" != "beta" ]; then
     mkdir -p ../../pumperpal-ota/archive/v$VERSION
     cp $TARGET_DIR/firmware.bin ../../pumperpal-ota/archive/v$VERSION/
     cp $TARGET_DIR/version.json ../../pumperpal-ota/archive/v$VERSION/
+    cp $TARGET_DIR/version.txt ../../pumperpal-ota/archive/v$VERSION/
 fi
 
 # Git operations
