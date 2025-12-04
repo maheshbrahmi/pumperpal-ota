@@ -4,8 +4,8 @@
   "min_battery_mv": 3700,
   "changelog": "Updated OTA",
   "url": "https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/firmware.bin",
-  "size": 488144,
+  "size": 488176,
   "md5": "",
-  "release_date": "2025-12-03",
+  "release_date": "2025-12-04",
   "rollout_percentage": 100
 }
