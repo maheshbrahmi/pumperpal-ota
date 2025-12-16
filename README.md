@@ -171,3 +171,28 @@ or
 
 # With verbose output:
 .\build-release.ps1 -Version "2.3.0" -Changelog "New features" -Verbose
+
+# Check serial port: powershell   # PowerShell
+   [System.IO.Ports.SerialPort]::getportnames()
+   
+   # Or in Device Manager
+   devmgmt.msc
+
+# Upload latest stable firmware (auto-detect port)
+.\upload-latest.ps1
+
+# Upload latest stable firmware to specific port
+.\upload-latest.ps1 -Port COM17
+
+# Upload beta firmware
+.\upload-latest.ps1 -Beta -Port COM17
+
+# Upload and open serial monitor
+.\upload-latest.ps1 -Port COM17 -Monitor
+
+# Build, release, and upload in one go
+.\build-release.ps1 -Version "2.3.0" -Changelog "Bug fixes"
+# Then answer 'y' when prompted to upload
+
+# From any directory where your scripts are:
+python -m esptool --port COM17 --baud 921600 write_flash 0x00000 "..\..\pumperpal-ota\firmware.bin"
