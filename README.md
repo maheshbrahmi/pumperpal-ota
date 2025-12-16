@@ -162,3 +162,12 @@ Push to GitHub: git add . && git commit -m "v2.2.0" && git push
 ./build_and_release.sh 2.1.1-beta 'Fixed voltage scaling'
 or
 ./build_and_release.sh 2.1.1 'Fixed voltage scaling'
+
+# For stable release:
+.\build-release.ps1 -Version "2.1.0" -Changelog "Fixed voltage scaling, added solar optimization"
+
+# For beta release:
+.\build-release.ps1 -Version "2.2.0-beta" -Changelog "Testing new sensor logic" -Type beta
+
+# With verbose output:
+.\build-release.ps1 -Version "2.3.0" -Changelog "New features" -Verbose
