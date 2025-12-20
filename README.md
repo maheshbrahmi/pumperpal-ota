@@ -196,3 +196,5 @@ or
 
 # From any directory where your scripts are:
 python -m esptool --port COM17 --baud 921600 write_flash 0x00000 "..\..\pumperpal-ota\firmware.bin"
+
+export PATH="/Users/mac/.platformio/penv/bin:$PATH"
