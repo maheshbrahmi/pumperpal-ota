@@ -11,3 +11,5 @@
 1. Copy desired version from archive to main directory
 2. Update version.json with `"mandatory": true`
 3. Commit and push
+
+./build_and_release.sh 2.3.6 '2.3.6'

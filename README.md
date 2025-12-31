@@ -198,3 +198,5 @@ or
 python -m esptool --port COM17 --baud 921600 write_flash 0x00000 "..\..\pumperpal-ota\firmware.bin"
 
 export PATH="/Users/mac/.platformio/penv/bin:$PATH"
+
+./build_and_release.sh 2.3 '2.3.6'
