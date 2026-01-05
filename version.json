@@ -1,11 +1,11 @@
 {
-  "version": "2.3.9",
+  "version": "2.4.0",
   "mandatory": false,
   "min_battery_mv": 3700,
-  "changelog": "2.3.9",
+  "changelog": "2.4.0",
   "url": "https://raw.githubusercontent.com/maheshbrahmi/pumperpal-ota/main/firmware.bin",
   "size": 520688,
   "md5": "",
-  "release_date": "2026-01-04",
+  "release_date": "2026-01-05",
   "rollout_percentage": 100
 }
