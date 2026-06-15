@@ -24,7 +24,7 @@ echo -e "${GREEN}Building Pumperpal firmware v$VERSION...${NC}"
 # Build firmware with PlatformIO
 cd ../../PumperpalFW/Main/  # Adjust path to your main project
 pwd
-pio run -e huzzah
+pio run -e main
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}Build failed!${NC}"
@@ -40,7 +40,7 @@ else
     TARGET_DIR="../../pumperpal-ota"
 fi
 
-cp .pio/build/huzzah/firmware.bin $TARGET_DIR/firmware.bin
+cp .pio/build/main/firmware.bin $TARGET_DIR/firmware.bin
 
 # Calculate MD5 and size
 MD5=$(md5sum $TARGET_DIR/firmware.bin | cut -d' ' -f1)
